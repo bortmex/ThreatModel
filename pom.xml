@@ -8,6 +8,9 @@
     <artifactId>Threatmodel</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
+
+    <name>Threat Model</name>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -35,12 +38,12 @@
 
     <build>
         <finalName>Threatmodel</finalName>
-        <defaultGoal>package</defaultGoal>
+        <defaultGoal>install</defaultGoal>
         <plugins>
             <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.1</version>
+            <version>3.7.0</version>
             <configuration>
                 <source>${java.version}</source>
                 <target>${java.version}</target>
@@ -55,6 +58,37 @@
                     <libraryDirectoryMode>NONE</libraryDirectoryMode>
                     <fileNameMapping>no-version</fileNameMapping>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.20.1</version>
+                <configuration>
+                    <argLine>-Dfile.encoding=UTF-8</argLine>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>com.github.jsimone</groupId>
+                                    <artifactId>webapp-runner</artifactId>
+                                    <version>8.5.11.2</version>
+                                    <destFileName>webapp-runner.jar</destFileName>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.cargo</groupId>
@@ -86,7 +120,7 @@
                     <deployables>
                         <deployable>
                             <groupId>ru.javaproject</groupId>
-                            <artifactId>loansystem</artifactId>
+                            <artifactId>Threatmodel</artifactId>
                             <type>war</type>
                             <properties>
                                 <context>${project.build.finalName}</context>
