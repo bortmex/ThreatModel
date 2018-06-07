@@ -3702,7 +3702,8 @@
     </database>
     <schema id="1234" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2018-06-08.01:26:41.838</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2018-06-08.02:26:12.627</IntrospectionTimestamp>
+      <IntrospectionStateNumber>2473924</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -3721,5 +3722,80 @@
     <schema id="1239" parent="2" name="information_schema">
       <ObjectId>13664</ObjectId>
     </schema>
+    <sequence id="1240" parent="1234" name="global_seq">
+      <ObjectId>2388712</ObjectId>
+      <StateNumber>2473923</StateNumber>
+    </sequence>
+    <table id="1241" parent="1234" name="threat">
+      <ObjectId>2388714</ObjectId>
+      <StateNumber>2473924</StateNumber>
+    </table>
+    <column id="1242" parent="1241" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2473924</StateNumber>
+      <DefaultExpression>nextval(&apos;global_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="1243" parent="1241" name="name">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2473924</StateNumber>
+    </column>
+    <column id="1244" parent="1241" name="description">
+      <Position>3</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2473924</StateNumber>
+    </column>
+    <column id="1245" parent="1241" name="source_of_threat">
+      <Position>4</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2473924</StateNumber>
+    </column>
+    <column id="1246" parent="1241" name="the_object_of_the_impact">
+      <Position>5</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2473924</StateNumber>
+    </column>
+    <column id="1247" parent="1241" name="breach_of_confidentiality">
+      <Position>6</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>2473924</StateNumber>
+    </column>
+    <column id="1248" parent="1241" name="integrity_violation">
+      <Position>7</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>2473924</StateNumber>
+    </column>
+    <column id="1249" parent="1241" name="violation_of_availability">
+      <Position>8</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>2473924</StateNumber>
+    </column>
+    <column id="1250" parent="1241" name="date_of_inclusion_of_threat_in_the_bnd">
+      <Position>9</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>2473924</StateNumber>
+    </column>
+    <column id="1251" parent="1241" name="last_modified_date">
+      <Position>10</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>2473924</StateNumber>
+    </column>
+    <index id="1252" parent="1241" name="threat_pkey">
+      <ObjectId>2388721</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="1253" parent="1241" name="threat_pkey">
+      <ObjectId>2388722</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>threat_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
   </database-model>
 </dataSource>

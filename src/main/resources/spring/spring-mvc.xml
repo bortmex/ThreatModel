@@ -7,6 +7,8 @@
 
     <bean class="ru.javaproject.threatmodel.web.json.JacksonObjectMapper" id="objectMapper" factory-method="getMapper"/>
 
+    <mvc:default-servlet-handler/>
+
     <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
         <property name="formatters">
             <set>
