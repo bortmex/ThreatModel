@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Threatmodel:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="Threatmodel.war">
+      <element id="artifact" artifact-name="Threatmodel:war exploded" />
+    </root>
+  </artifact>
+</component>
