@@ -59,11 +59,6 @@
                         <entry key="#{T(org.hibernate.cfg.AvailableSettings).FORMAT_SQL}" value="${hibernate.format_sql}"/>
                         <entry key="#{T(org.hibernate.cfg.AvailableSettings).USE_SQL_COMMENTS}"
                                value="${hibernate.use_sql_comments}"/>
-                        <!--https://github.com/hibernate/hibernate-orm/blob/master/documentation/src/main/asciidoc/userguide/chapters/caching/Caching.adoc#caching-provider-jcache-->
-                        <entry key="#{T(org.hibernate.cfg.AvailableSettings).CACHE_REGION_FACTORY}" value="org.hibernate.cache.jcache.JCacheRegionFactory"/>
-                        <entry key="#{T(org.hibernate.cache.jcache.JCacheRegionFactory).PROVIDER}" value="org.ehcache.jsr107.EhcacheCachingProvider"/>
-                        <entry key="#{T(org.hibernate.cfg.AvailableSettings).USE_SECOND_LEVEL_CACHE}" value="true"/>
-                        <entry key="#{T(org.hibernate.cfg.AvailableSettings).USE_QUERY_CACHE}" value="false"/> <!--default-->
 
             </map>
         </property>

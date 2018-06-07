@@ -7,5 +7,16 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:1234/threatmodel</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="dcs7astqb8vhs9@ec2-54-235-75-214.compute-1.amazonaws.com" uuid="ad681974-e95a-4fe7-b928-a4ca44c76cdc">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-54-235-75-214.compute-1.amazonaws.com:5432/dcs7astqb8vhs9</jdbc-url>
+      <driver-properties>
+        <property name="ApplicationName" value="DataGrip" />
+        <property name="ssl" value="true" />
+        <property name="sslfactory" value="org.postgresql.ssl.NonValidatingFactory" />
+      </driver-properties>
+    </data-source>
   </component>
 </project>
